@@ -721,7 +721,7 @@ dissect_dcom_SI_ServerInfo(tvbuff_t *tvb, gint offset,
 }
 
 static int
-dissect_dcom_SecurtiyInfo(tvbuff_t *tvb, gint offset, packet_info *pinfo,
+dissect_dcom_SecurityInfo(tvbuff_t *tvb, gint offset, packet_info *pinfo,
                        proto_tree *tree, dcerpc_info *di, guint8 *drep, gint size)
 {
     proto_tree *sub_tree;
@@ -1117,7 +1117,7 @@ sysact_register_routines(void)
     dcom_register_rountine(dissect_dcom_InstantiationInfo, &clsid_InstantiationInfo);
     dcom_register_rountine(dissect_dcom_ActivationContextInfo, &clsid_ActivationContextInfo);
     dcom_register_rountine(dissect_dcom_ContextMarshaler, &clsid_ContextMarshaler);
-    dcom_register_rountine(dissect_dcom_SecurtiyInfo, &clsid_SecurityInfo);
+    dcom_register_rountine(dissect_dcom_SecurityInfo, &clsid_SecurityInfo);
     dcom_register_rountine(dissect_dcom_LocationInfo, &clsid_ServerLocationInfo);
     dcom_register_rountine(dissect_dcom_ScmRqstInfo, &clsid_ScmRequestInfo);
     dcom_register_rountine(dissect_dcom_PropsOutInfo, &clsid_PropsOutInfo);
